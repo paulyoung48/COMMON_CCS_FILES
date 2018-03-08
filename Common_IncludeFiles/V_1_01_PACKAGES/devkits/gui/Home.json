@@ -1,0 +1,20 @@
+/*  Home.json file. This describes bindings to RTSC config params. It is loaded
+ *  with Home.html
+ */
+{"widgetBindings": [
+	{
+		"serverBindName": "backplane.$default_model",
+		"options": { "defaultValue" : "rtsc" }
+	},
+    
+    /*  Binding to RTSC config param solutionName. It's initialized in
+     *  Home.xs where it is read from the solution.js file in the current
+     *  CCS project.
+     */
+    {
+        "propertyName": "solutionName",
+        "serverBindName": "this.solutionName",
+        "widgetId": "prop",
+        "options": {"dataType": "String"}
+    }
+]}

@@ -1,0 +1,45 @@
+ <!--Home.html. Top level powerSuite HTML file-->
+<!DOCTYPE html>
+<html>
+<head data-gc-version="1.5.201309171800">
+	<meta charset="utf-8"/>
+	<title>Grace</title>
+	<script type="text/javascript" src="lib/davinci.dojo_1_8/WebContent/dojo/dojo/dojo.js" data-dojo-config="'parseOnLoad':false,'async':true,'packages':[{'name':'gc','location':'../../../../davinci.gc_1_5/WebContent/gc'},{'name':'maqetta','location':'../../../../davinci.gc_1_5/WebContent/maqetta'}]"></script>
+	<script type="text/javascript">
+		require([
+			"dijit/dijit",
+			"dojo/parser",
+			"maqetta/space",
+			"maqetta/AppStates",
+			"gc/dijit/ContentPane",
+			"gc/dijit/A",
+            "gc/dijit/Image",
+            "gc/dijit/MultiImage",
+            "ti/mcu/common/gui/widgets/SafeDropList",
+            "gc/dijit/TitlePane",
+            "gc/dijit/Button",
+            "gc/dijit/Label"
+		], function() {
+			gcAngular.bootstrap(Document.body, ['Main_app']);
+		});
+	</script>
+	<style>
+		@import "lib/davinci.dojo_1_8/WebContent/maqetta/themes/claro/document.css";
+		@import "lib/davinci.dojo_1_8/WebContent/maqetta/themes/claro/claro.css";
+		@import "lib/davinci.gc_1_5/WebContent/gc/dijit/libs/css/widgets.css";
+		@import "lib/davinci.dojo_1_8/WebContent/dojo/dojo/resources/dojo.css";
+		@import "lib/davinci.gc_1_5/WebContent/gc/dijit/resources/CheckedMultiSelect.css";
+		@import "lib/davinci.gc_1_5/WebContent/gc/dijit/resources/GroupBox.css";
+		@import "ti/mcu/common/gui/grace.css";
+	</style>
+	<script type="text/javascript" src="lib/davinci.gc_1_5/WebContent/gc/backplane/guiComposer.js"></script>
+	<script type="text/javascript" src="ti/mcu/common/gui/angular/angular.js"></script>
+	<script type="text/javascript" src="ti/mcu/common/gui/gc-angular.js"></script>
+	<script type="text/javascript" src="ti/mcu/common/gui/grace.js"></script>
+	<script type="text/javascript" src="Home.js"></script>
+</head>
+<body ng-controller="MainCtrl" data-maq-flow-layout="false" data-maq-ws="collapse" class="claro" id="grace" data-maq-appstates="{}">
+	<div ng-view style="height:100%">
+	</div>
+</body>
+</html>

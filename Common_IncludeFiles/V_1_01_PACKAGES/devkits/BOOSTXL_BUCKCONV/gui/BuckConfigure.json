@@ -1,0 +1,722 @@
+/*
+ *  ======== {Solution}Configure.json ========
+ *  Where {Solution} is 'Buck'
+ *  This file gets loaded with a corresponding HTML page
+ *  as specified in the routing registration in ${Solution}.app.config() in
+ *  {Solution}.js. It contains bindings to RTSC config params declared in {Solution}.xdc
+ *  and to widgets in HTML files in the gui/pages directory.
+ *  See http://ap-fpdsp-swapps.dal.design.ti.com/index.php/PowerSuite#.json_file_bindings
+ *  for details on .json file properties used here.
+ */
+
+/* widget bindings object */
+{"widgetBindings": [
+
+    /* Hook up the RTSC backplane so binding to {Solution}.xdc occurs */
+    {
+        "serverBindName": "backplane.$default_model",
+        "options": { "defaultValue" : "rtsc" }
+    },
+    
+    /*
+     *  ======== solutionParams ========
+     *  String that contains the contents of solution.js in the
+     *  current CCS project. Initialized in {Solution}.xs
+     *  See $scope.$watch('solutionParams') listener in {Solution}.js.
+     */
+    {
+        "propertyName": "solutionParams",
+        "serverBindName": "this.solutionParams",
+        "widgetId": "prop",
+        "options": {"dataType": "String"}
+    },
+
+    /*
+     *  ======== execPowerStage ========
+     *  Binding to execPowerStage RTSC config param.
+     *  See $scope.execPowerStageClicked() function in
+     *  {Solution}.js for details
+     */
+    {
+        "propertyName": "execPowerStage",
+        "serverBindName": "this.execPowerStage",
+        "widgetId": "prop",
+        "options": {"dataType": "Boolean"}
+    },
+
+    /*
+     *  ======== refreshPowerStage ========
+     *  Binding to refreashPowerStage RTSC config param.
+     *  See $scope.refreshPowerStageClicked() function in
+     *  {Solution}.js for details
+     */
+    {
+        "propertyName": "refreshPowerStage",
+        "serverBindName": "this.refreshPowerStage",
+        "widgetId": "prop",
+        "options": {"dataType": "Boolean"}
+    },
+
+    /*
+     *  ======== execSFRA ========
+     *  Binding to execSFRA RTSC confog param.
+     *  See $scope.execSFRAClicked() function in
+     *  {Solution}.js for details
+     */
+    {
+        "propertyName": "execSFRA",
+        "serverBindName": "this.execSFRA",
+        "widgetId": "prop",
+        "options": {"dataType": "Boolean"}
+    },
+
+    /*
+     *  ======== projIsInControlSuite ========
+     *  Set to true if current  CCS project
+     *  is in the controlSUITE installation
+     */
+    {
+        "propertyName": "projIsInControlSuite",
+        "serverBindName": "this.projIsInControlSuite",
+        "widgetId": "prop",
+        "options": {"dataType": "Boolean"}
+    },
+	
+	/* enables access of the RTSC config param in {solution.js} file*/
+	{
+        "propertyName": "saveSettings",
+        "serverBindName": "this.saveSettings",
+        "widgetId": "prop",
+        "options": {"dataType": "Boolean"}
+    },
+	
+	/* enables access of the RTSC config param in {solution.js} file*/
+    {
+        "propertyName": "solution",
+        "serverBindName": "this.solution",
+        "widgetId": "prop",
+        "options": {"dataType": "String"}
+    },
+	
+	/* enables access of the RTSC config param in {solution.js} file*/
+    {
+        "propertyName": "type",
+        "serverBindName": "this.type",
+        "widgetId": "prop",
+        "options": {"dataType": "String"}
+    },
+	
+	/* enables access of the RTSC config param in {solution.js} file*/
+    {
+        "propertyName": "device",
+        "serverBindName": "this.device",
+        "widgetId": "prop",
+        "options": {"dataType": "String"}
+    },
+
+    /*  All of the remaining items refer to widgets in HTML
+     *  files in the gui/pages directory and their corresponding
+     *  RTSC config params
+     */
+	 
+	 
+	 /* Drop Down List */
+	 
+	 /* PWM Index */
+	 /* Binds the RTSC config param to widget in the HTML file */
+    {
+        "propertyName": "index",
+        "serverBindName": "this.pwmIndex",
+        "widgetId": "pwmSelect",
+        "options": {"dataType": "Integer"}
+    },
+	/* Enables putting a listener in the .js file */
+    {
+        "propertyName": "pwmIndex",
+        "serverBindName": "this.pwmIndex",
+        "widgetId": "prop",
+        "options": {"dataType": "Integer"}
+    },
+	/* enables modification of RTSC config param in the .js file */
+    {
+        "propertyName": "pwmNo",
+        "serverBindName": "this.pwmNo",
+        "widgetId": "prop",
+        "options": {"dataType": "Integer"}
+    },
+	/* enables modification of RTSC config param in the .js file */
+	{
+        "propertyName": "adcTriggerSource",
+        "serverBindName": "this.adcTriggerSource",
+        "widgetId": "prop",
+        "options": {"dataType": "Integer"}
+    },
+	
+	/* COMP_NUM_Index */
+	/* Binds the RTSC config param to widget in the HTML file */
+	{
+      "propertyName": "index",
+      "serverBindName": "this.COMP_NUM_Index",
+      "widgetId": "COMP_NUM_Select",
+      "options": {"dataType": "Integer"}
+	},
+	/* Enables putting a listener in the .js file */
+	{
+      "propertyName": "COMP_NUM_Index",
+      "serverBindName": "this.COMP_NUM_Index",
+      "widgetId": "prop",
+      "options": {"dataType": "Integer"}
+	},
+	/* enables modification of RTSC config param in the .js file using $rootScope. */
+	{
+      "propertyName": "COMP_NUM",
+      "serverBindName": "this.COMP_NUM",
+      "widgetId": "prop",
+      "options": {"dataType": "Integer"}
+	},
+	
+	/* adcPinVOUTIndex */
+	/* Binds the RTSC config param to widget in the HTML file */
+    {
+        "propertyName": "index",
+        "serverBindName": "this.adcPinVOUTIndex",
+        "widgetId": "adcVoutSelect",
+        "options": {"dataType": "Integer"}
+    },
+	/* Enables putting a listener in the .js file */
+	  {
+        "propertyName": "adcPinVOUTIndex",
+        "serverBindName": "this.adcPinVOUTIndex",
+        "widgetId": "prop",
+        "options": {"dataType": "Integer"}
+    },
+	/* enables modification of RTSC config param in the .js file */
+	{
+        "propertyName": "adcPinVOUT",
+        "serverBindName": "this.adcPinVOUT",
+        "widgetId": "prop",
+        "options": {"dataType": "Integer"}
+    },
+	
+	/* adcPinVINIndex */
+	/* Binds the RTSC config param to widget in the HTML file */
+    {
+        "propertyName": "index",
+        "serverBindName": "this.adcPinVINIndex",
+        "widgetId": "adcVinSelect",
+        "options": {"dataType": "Integer"}
+    },
+	/* Enables putting a listener in the .js file */
+    {
+        "propertyName": "adcPinVINIndex",
+        "serverBindName": "this.adcPinVINIndex",
+        "widgetId": "prop",
+        "options": {"dataType": "Integer"}
+    },
+	/* enables modification of RTSC config param in the .js file */
+	{
+        "propertyName": "adcPinVIN",
+        "serverBindName": "this.adcPinVIN",
+        "widgetId": "prop",
+        "options": {"dataType": "Integer"}
+    },
+	
+	/* adcILIndex */
+	/* Binds the RTSC config param to widget in the HTML file */
+    {
+        "propertyName": "index",
+        "serverBindName": "this.adcILIndex",
+        "widgetId": "adcILSelect",
+        "options": {"dataType": "Integer"}
+    },
+	/* Enables putting a listener in the .js file */
+    {
+        "propertyName": "adcILIndex",
+        "serverBindName": "this.adcILIndex",
+        "widgetId": "prop",
+        "options": {"dataType": "Integer"}
+    },
+	/* enables modification of RTSC config param in the .js file */
+    {
+        "propertyName": "adcILPin",
+        "serverBindName": "this.adcILPin",
+        "widgetId": "prop",
+        "options": {"dataType": "Integer"}
+    },
+	/* enables modification of RTSC config param in the .js file */
+	{
+        "propertyName": "adcILComparator",
+        "serverBindName": "this.adcILComparator",
+        "widgetId": "prop",
+        "options": {"dataType": "Integer"}
+    },
+	
+	/* adcPinIinIndex */
+	/* Binds the RTSC config param to widget in the HTML file */
+	{
+        "propertyName": "index",		/*widget selection*/
+        "serverBindName": "this.adcPinIinIndex", /* RTSC config param */
+        "widgetId": "adcIinSelect",			/* html widget Id */
+        "options": {"dataType": "Integer"}
+    },
+	/* Enables putting a listener in the .js file */
+	{
+        "propertyName": "adcPinIinIndex",	/* $rootScope property in {Solution}.js*/
+        "serverBindName": "this.adcPinIinIndex", /* RTSC config param */
+        "widgetId": "prop",						/* widgetID for a RTSC config param */
+        "options": {"dataType": "Integer"}
+    },
+	/* enables modification of RTSC config param in the .js file */
+	{
+        "propertyName": "adcPinIin",		/* $rootScope property in {Solution}.js*/
+        "serverBindName": "this.adcPinIin",	/* RTSC config param */
+        "widgetId": "prop",					/* widgetID for a RTSC config param */
+        "options": {"dataType": "Integer"}
+    },
+	
+	/* adcPinIL_AVGIndex */
+	/* Binds the RTSC config param to widget in the HTML file */
+    {
+        "propertyName": "index",
+        "serverBindName": "this.adcPinIL_AVGIndex",
+        "widgetId": "adcIL_AVGSelect",
+        "options": {"dataType": "Integer"}
+    },
+	/* Enables putting a listener in the .js file */
+	  {
+        "propertyName": "adcPinIL_AVGIndex",
+        "serverBindName": "this.adcPinIL_AVGIndex",
+        "widgetId": "prop",
+        "options": {"dataType": "Integer"}
+    },
+	/* enables modification of RTSC config param in the .js file */
+	{
+        "propertyName": "adcPinIL_AVG",
+        "serverBindName": "this.adcPinIL_AVG",
+        "widgetId": "prop",
+        "options": {"dataType": "Integer"}
+    },
+	
+	/* Fsw_Fctrl_Ratio_Index */
+	/* Binds the RTSC config param to widget in the HTML file */
+	{
+        "propertyName": "index",		/*widget selection*/
+        "serverBindName": "this.Fsw_Fctrl_Ratio_Index", /* RTSC config param */
+        "widgetId": "Fsw_Fctrl_Ratio_Select",			/* html widget Id */
+        "options": {"dataType": "Integer"}
+    },
+	/* Enables putting a listener in the .js file */
+	{
+        "propertyName": "Fsw_Fctrl_Ratio_Index",	/* $rootScope property in {Solution}.js*/
+        "serverBindName": "this.Fsw_Fctrl_Ratio_Index", /* RTSC config param */
+        "widgetId": "prop",						/* widgetID for a RTSC config param */
+        "options": {"dataType": "Integer"}
+    },
+	/* enables modification of RTSC config param in the .js file */
+	{
+        "propertyName": "Fsw_Fctrl_Ratio",		/* $rootScope property in {Solution}.js*/
+        "serverBindName": "this.Fsw_Fctrl_Ratio",	/* RTSC config param */
+        "widgetId": "prop",					/* widgetID for a RTSC config param */
+        "options": {"dataType": "Integer"}
+    },
+	
+	/* INCR_BUILD_Index */
+	/* Binds the RTSC config param to widget in the HTML file */
+	{
+        "propertyName": "index",		/*widget selection*/
+        "serverBindName": "this.INCR_BUILD_Index", /* RTSC config param */
+        "widgetId": "INCR_BUILD_Select",			/* html widget Id */
+        "options": {"dataType": "Integer"}
+    },
+	/* Enables putting a listener in the .js file */
+	{
+        "propertyName": "INCR_BUILD_Index",	/* $rootScope property in {Solution}.js*/
+        "serverBindName": "this.INCR_BUILD_Index", /* RTSC config param */
+        "widgetId": "prop",						/* widgetID for a RTSC config param */
+        "options": {"dataType": "Integer"}
+    },
+	/* enables modification of RTSC config param in the .js file */
+	{
+        "propertyName": "INCR_BUILD",		/* $rootScope property in {Solution}.js*/
+        "serverBindName": "this.INCR_BUILD",	/* RTSC config param */
+        "widgetId": "prop",					/* widgetID for a RTSC config param */
+        "options": {"dataType": "Integer"}
+    },
+	
+	
+	/* Text Boxes */
+	
+	/* Fsw */
+	/* Binds the RTSC config param to widget in the HTML file */
+    {
+        "propertyName": "value",
+        "serverBindName": "this.Fsw",
+        "widgetId": "Fsw_TextBox",
+        "options": {"dataType": "String"}
+    },
+	/* Enables putting a listener in the .js file */
+    {
+        "propertyName": "Fsw",
+        "serverBindName": "this.Fsw",
+        "widgetId": "prop",
+        "options": {"dataType": "String"}
+    },
+	
+	/* Fctrl Nominal */
+	/* Binds the RTSC config param to widget in the HTML file */
+	{
+        "propertyName": "Fctrl",
+        "serverBindName": "this.Fctrl",
+        "widgetId": "prop",
+        "options": {"dataType": "String"}
+    },
+	
+    /* Vin Nominal */
+	/* Binds the RTSC config param to widget in the HTML file */
+	{
+        "propertyName": "value",
+        "serverBindName": "this.Vin",
+        "widgetId": "Vin_TextBox",
+        "options": {"dataType": "String"}
+    },
+	
+	/* Vout Nominal */
+	/* Binds the RTSC config param to widget in the HTML file */
+    {
+        "propertyName": "value",
+        "serverBindName": "this.Vout",
+        "widgetId": "Vout_TextBox",
+        "options": {"dataType": "String"}
+    },
+	
+	/* Iout Nominal */
+	/* Binds the RTSC config param to widget in the HTML file */
+    {
+        "propertyName": "value",
+        "serverBindName": "this.Iout",
+        "widgetId": "Iout_TextBox",
+        "options": {"dataType": "String"}
+    },
+	
+
+		
+	/* L */
+	/* Binds the RTSC config param to widget in the HTML file */
+    {
+        "propertyName": "value",
+        "serverBindName": "this.L",
+        "widgetId": "L_TextBox",
+        "options": {"dataType": "String"}
+    },
+	/* Binds the RTSC config param to widget in the HTML file */
+    {
+        "propertyName": "value",
+        "serverBindName": "this.DCR",
+        "widgetId": "DCR_TextBox",
+        "options": {"dataType": "String"}
+    },
+	
+	/* Celec */
+	/* Binds the RTSC config param to widget in the HTML file */
+    {
+        "propertyName": "value",
+        "serverBindName": "this.Celec",
+        "widgetId": "Celec_TextBox",
+        "options": {"dataType": "String"}
+    },
+	/* Binds the RTSC config param to widget in the HTML file */
+    {
+        "propertyName": "value",
+        "serverBindName": "this.ESRelec",
+        "widgetId": "ESRelec_TextBox",
+        "options": {"dataType": "String"}
+    },
+	/* Binds the RTSC config param to widget in the HTML file */
+    {
+        "propertyName": "value",
+        "serverBindName": "this.ESLelec",
+        "widgetId": "ESLelec_TextBox",
+        "options": {"dataType": "String"}
+    },
+	
+	/* Ccer */
+	/* Binds the RTSC config param to widget in the HTML file */
+    {
+        "propertyName": "value",
+        "serverBindName": "this.Ccer",
+        "widgetId": "Ccer_TextBox",
+        "options": {"dataType": "String"}
+    },
+	/* Binds the RTSC config param to widget in the HTML file */
+    {
+        "propertyName": "value",
+        "serverBindName": "this.ESRcer",
+        "widgetId": "ESRcer_TextBox",
+        "options": {"dataType": "String"}
+    },
+	/* Binds the RTSC config param to widget in the HTML file */
+    {
+        "propertyName": "value",
+        "serverBindName": "this.ESLcer",
+        "widgetId": "ESLcer_TextBox",
+        "options": {"dataType": "String"}
+    },
+	
+	/*Vout Sense */
+	/* Binds the RTSC config param to widget in the HTML file */
+    {
+        "propertyName": "value",
+        "serverBindName": "this.Rc",
+        "widgetId": "Rc_TextBox",
+        "options": {"dataType": "String"}
+    },
+	/* Enables putting a listener in the .js file */
+    {
+        "propertyName": "Rc",
+        "serverBindName": "this.Rc",
+        "widgetId": "prop",
+        "options": {"dataType": "String"}
+    },
+	/* Binds the RTSC config param to widget in the HTML file */
+    {
+        "propertyName": "value",
+        "serverBindName": "this.Rd",
+        "widgetId": "Rd_TextBox",
+        "options": {"dataType": "String"}
+    },
+	/* Enables putting a listener in the .js file */
+    {
+        "propertyName": "Rd",
+        "serverBindName": "this.Rd",
+        "widgetId": "prop",
+        "options": {"dataType": "String"}
+    },
+	
+	/* Vout_SenseMax */
+	/* Binds the RTSC config param to widget in the HTML file */
+    {
+        "propertyName": "value",
+        "serverBindName": "this.Vout_SenseMax",
+        "widgetId": "Vout_SenseMax_TextBox",
+        "options": {"dataType": "String"}
+    },
+	/* Enables putting a listener in the .js file */
+    {
+        "propertyName": "Vout_SenseMax",
+        "serverBindName": "this.Vout_SenseMax",
+        "widgetId": "prop",
+        "options": {"dataType": "String"}
+    },
+	
+	/* Rfltr_a */
+	/* Binds the RTSC config param to widget in the HTML file */
+    {
+        "propertyName": "value",
+        "serverBindName": "this.Rfltr_a",
+        "widgetId": "Rfltr_a_TextBox",
+        "options": {"dataType": "String"}
+    },
+	/* Enables manipulation in the .js file */
+    {
+        "propertyName": "Rfltr_a",
+        "serverBindName": "this.Rfltr_a",
+        "widgetId": "prop",
+        "options": {"dataType": "String"}
+    },
+	
+	/* Cfltr_a */
+	/* Binds the RTSC config param to widget in the HTML file */
+    {
+        "propertyName": "value",
+        "serverBindName": "this.Cfltr_a",
+        "widgetId": "Cfltr_a_TextBox",
+        "options": {"dataType": "String"}
+    },
+	/* Enables manipulation in the .js file */
+    {
+        "propertyName": "Cfltr_a",
+        "serverBindName": "this.Cfltr_a",
+        "widgetId": "prop",
+        "options": {"dataType": "String"}
+    },
+	
+	/*Vout_Sense_Fltr_Cuttoff*/
+	/* Binds the RTSC config param to widget in the HTML file */
+    {
+        "propertyName": "value",
+        "serverBindName": "this.Vout_Sense_Fltr_Cuttoff",
+        "widgetId": "Vout_Sense_Fltr_Cuttoff_TextBox",
+        "options": {"dataType": "String"}
+    },
+	/* Enables manipulation in the .js file */
+    {
+        "propertyName": "Vout_Sense_Fltr_Cuttoff",
+        "serverBindName": "this.Vout_Sense_Fltr_Cuttoff",
+        "widgetId": "prop",
+        "options": {"dataType": "String"}
+    },
+	
+
+	/*Vin Sense */
+	/* Binds the RTSC config param to widget in the HTML file */
+    {
+        "propertyName": "value",
+        "serverBindName": "this.Ra",
+        "widgetId": "Ra_TextBox",
+        "options": {"dataType": "String"}
+    },
+	/* Enables putting a listener in the .js file */
+    {
+        "propertyName": "Ra",
+        "serverBindName": "this.Ra",
+        "widgetId": "prop",
+        "options": {"dataType": "String"}
+    },
+	/* Binds the RTSC config param to widget in the HTML file */
+    {
+        "propertyName": "value",
+        "serverBindName": "this.Rb",
+        "widgetId": "Rb_TextBox",
+        "options": {"dataType": "String"}
+    },
+	/* Enables putting a listener in the .js file */
+    {
+        "propertyName": "Rb",
+        "serverBindName": "this.Rb",
+        "widgetId": "prop",
+        "options": {"dataType": "String"}
+    },
+	
+	/* Vin_SenseMax */
+	/* Binds the RTSC config param to widget in the HTML file */
+    {
+        "propertyName": "value",
+        "serverBindName": "this.Vin_SenseMax",
+        "widgetId": "Vin_SenseMax_TextBox",
+        "options": {"dataType": "String"}
+    },
+	/* Enables putting a listener in the .js file */
+    {
+        "propertyName": "Vin_SenseMax",
+        "serverBindName": "this.Vin_SenseMax",
+        "widgetId": "prop",
+        "options": {"dataType": "String"}
+    },
+	
+	/* Rcs */
+	/* Binds the RTSC config param to widget in the HTML file */
+    {
+        "propertyName": "value",
+        "serverBindName": "this.Rcs",
+        "widgetId": "Rcs_TextBox",
+        "options": {"dataType": "String"}
+    },
+	/* Enables putting a listener in the .js file */
+    {
+        "propertyName": "Rcs",
+        "serverBindName": "this.Rcs",
+        "widgetId": "prop",
+        "options": {"dataType": "String"}
+    },
+	
+	/* Il_gain */
+	/* Binds the RTSC config param to widget in the HTML file */
+    {
+        "propertyName": "value",
+        "serverBindName": "this.I_gain",
+        "widgetId": "I_gain_TextBox",
+        "options": {"dataType": "String"}
+    },
+	/* Enables putting a listener in the .js file */
+    {
+        "propertyName": "I_gain",
+        "serverBindName": "this.I_gain",
+        "widgetId": "prop",
+        "options": {"dataType": "String"}
+    },
+	/* Il_SenseMax */
+	/* Binds the RTSC config param to widget in the HTML file */
+    {
+        "propertyName": "value",
+        "serverBindName": "this.Il_SenseMax",
+        "widgetId": "Il_SenseMax_TextBox",
+        "options": {"dataType": "String"}
+    },
+	/* Enables putting a listener in the .js file */
+    {
+        "propertyName": "Il_SenseMax",
+        "serverBindName": "this.Il_SenseMax",
+        "widgetId": "prop",
+        "options": {"dataType": "String"}
+    },
+	
+	/* Rfltr_b */
+	/* Binds the RTSC config param to widget in the HTML file */
+    {
+        "propertyName": "value",
+        "serverBindName": "this.Rfltr_b",
+        "widgetId": "Rfltr_b_TextBox",
+        "options": {"dataType": "String"}
+    },
+	/* Enables manipulation in the .js file */
+    {
+        "propertyName": "Rfltr_b",
+        "serverBindName": "this.Rfltr_b",
+        "widgetId": "prop",
+        "options": {"dataType": "String"}
+    },
+	
+	/* Cfltr_b */
+	/* Binds the RTSC config param to widget in the HTML file */
+    {
+        "propertyName": "value",
+        "serverBindName": "this.Cfltr_b",
+        "widgetId": "Cfltr_b_TextBox",
+        "options": {"dataType": "String"}
+    },
+	/* Enables manipulation in the .js file */
+    {
+        "propertyName": "Cfltr_b",
+        "serverBindName": "this.Cfltr_b",
+        "widgetId": "prop",
+        "options": {"dataType": "String"}
+    },
+	
+	/*Il_Sense_Fltr_Cuttoff*/
+	/* Binds the RTSC config param to widget in the HTML file */
+    {
+        "propertyName": "value",
+        "serverBindName": "this.Il_Sense_Fltr_Cuttoff",
+        "widgetId": "Il_Sense_Fltr_Cuttoff_TextBox",
+        "options": {"dataType": "String"}
+    },
+	/* Enables manipulation in the .js file */
+    {
+        "propertyName": "Il_Sense_Fltr_Cuttoff",
+        "serverBindName": "this.Il_Sense_Fltr_Cuttoff",
+        "widgetId": "prop",
+        "options": {"dataType": "String"}
+    },
+	
+	/* Rds1 */
+	/* Binds the RTSC config param to widget in the HTML file */
+    {
+        "propertyName": "value",
+        "serverBindName": "this.Rds1",
+        "widgetId": "Rds1_TextBox",
+        "options": {"dataType": "String"}
+    },
+	
+	/* Rds2 */
+	/* Binds the RTSC config param to widget in the HTML file */
+    {
+        "propertyName": "value",
+        "serverBindName": "this.Rds2",
+        "widgetId": "Rds2_TextBox",
+        "options": {"dataType": "String"}
+    },
+		
+	
+	
+]}
+

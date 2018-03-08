@@ -1,0 +1,128 @@
+//----------------------------------------------------------------------------------
+//	FILE:			{ProjectName}-Settings.h
+//
+//	Description:    This file contains the definitions for this project, and is 
+//					linked to both {ProjectName}-Main.c and {ProjectName}-DPL-ISR.asm 
+//					(where X is the project name).  
+//
+//	Type: 			Device Independent
+//
+//----------------------------------------------------------------------------------
+//  Copyright Texas Instruments © 2010
+//----------------------------------------------------------------------------------
+//  Revision History:
+//----------------------------------------------------------------------------------
+//  Date	  | Description / Status
+//----------------------------------------------------------------------------------
+// 9 April 2010 - MB
+//----------------------------------------------------------------------------------
+
+#ifndef _PROJSETTINGS_H
+#define _PROJSETTINGS_H
+
+//**********************************************************************************
+//  NOTE: WHEN CHANGING THIS FILE PLEASE REBUILD ALL
+//**********************************************************************************
+
+#define CPU_SYS_CLOCK 100000
+
+#define INCR_BUILD `this.INCR_BUILD_Index+1`
+#define	CNTRL_ISR_FREQ_RATIO	`this.Fsw_Fctrl_Ratio`
+
+#define BUCK_PWM_SWITCHING_FREQUENCY `this.Fsw`
+#define BUCK_PWM_PERIOD (CPU_SYS_CLOCK)/BUCK_PWM_SWITCHING_FREQUENCY
+
+#define BUCK_PWM_NO       	`this.pwmNo`
+#define ADC_TRIG_SOURCE   	`this.adcTriggerSource`
+#define ADC_PIN_VOUT	  	`this.adcPinVOUT`
+#define ADC_PIN_VIN	  		`this.adcPinVIN`
+#define ADC_PIN_IL	  		`this.adcILPin`
+#define ADC_PIN_IL_AVG 		`this.adcPinIL_AVG`
+#define ADC_IL_COMPARATOR `this.adcILComparator`
+
+#define OUTPUT_VOLTAGE    `this.Vout`
+#define VIN_MAX_SENSED    `this.Vin_SenseMax`
+#define VOUT_MAX_SENSED   `this.Vout_SenseMax`
+#define IL_MAX_SENSED     `this.Il_SenseMax`
+#define IL_TRIP_LEVEL     `this.Il_TripLevel`
+
+//==================================================================================
+// Comp Settings
+//----------------------------------------------------------------------------------
+
+#define ACTIVE_COMP `this.COMP_NUM_Index+1`
+#define CNTL_3p3z_A1_1 `Number(this.COMP[0].A1).toFixed(10)`
+#define CNTL_3p3z_A2_1 `Number(this.COMP[0].A2).toFixed(10)`
+#define CNTL_3p3z_A3_1 `Number(this.COMP[0].A3).toFixed(10)`
+#define CNTL_3p3z_B0_1 `Number(this.COMP[0].B0).toFixed(10)`
+#define CNTL_3p3z_B1_1 `Number(this.COMP[0].B1).toFixed(10)`
+#define CNTL_3p3z_B2_1 `Number(this.COMP[0].B2).toFixed(10)`
+#define CNTL_3p3z_B3_1 `Number(this.COMP[0].B3).toFixed(10)`
+#define CNTL_3p3z_IMin_1 _IQ24(-0.1);
+#define CNTL_3p3z_Max_1 _IQ24(0.9);
+#define CNTL_3p3z_Min_1 _IQ24(0.0);
+
+#define CNTL_3p3z_A1_2 `Number(this.COMP[1].A1).toFixed(10)`
+#define CNTL_3p3z_A2_2 `Number(this.COMP[1].A2).toFixed(10)`
+#define CNTL_3p3z_A3_2 `Number(this.COMP[1].A3).toFixed(10)`
+#define CNTL_3p3z_B0_2 `Number(this.COMP[1].B0).toFixed(10)`
+#define CNTL_3p3z_B1_2 `Number(this.COMP[1].B1).toFixed(10)`
+#define CNTL_3p3z_B2_2 `Number(this.COMP[1].B2).toFixed(10)`
+#define CNTL_3p3z_B3_2 `Number(this.COMP[1].B3).toFixed(10)`
+#define CNTL_3p3z_IMin_2 _IQ24(-0.1);
+#define CNTL_3p3z_Max_2 _IQ24(0.9);
+#define CNTL_3p3z_Min_2 _IQ24(0.0);
+
+
+#define CNTL_3p3z_A1_3 `Number(this.COMP[2].A1).toFixed(10)`
+#define CNTL_3p3z_A2_3 `Number(this.COMP[2].A2).toFixed(10)`
+#define CNTL_3p3z_A3_3 `Number(this.COMP[2].A3).toFixed(10)`
+#define CNTL_3p3z_B0_3 `Number(this.COMP[2].B0).toFixed(10)`
+#define CNTL_3p3z_B1_3 `Number(this.COMP[2].B1).toFixed(10)`
+#define CNTL_3p3z_B2_3 `Number(this.COMP[2].B2).toFixed(10)`
+#define CNTL_3p3z_B3_3 `Number(this.COMP[2].B3).toFixed(10)`
+#define CNTL_3p3z_IMin_3 _IQ24(-0.1);
+#define CNTL_3p3z_Max_3 _IQ24(0.9);
+#define CNTL_3p3z_Min_3 _IQ24(0.0);
+
+#define CNTL_3p3z_A1_4 `Number(this.COMP[3].A1).toFixed(10)`
+#define CNTL_3p3z_A2_4 `Number(this.COMP[3].A2).toFixed(10)`
+#define CNTL_3p3z_A3_4 `Number(this.COMP[3].A3).toFixed(10)`
+#define CNTL_3p3z_B0_4 `Number(this.COMP[3].B0).toFixed(10)`
+#define CNTL_3p3z_B1_4 `Number(this.COMP[3].B1).toFixed(10)`
+#define CNTL_3p3z_B2_4 `Number(this.COMP[3].B2).toFixed(10)`
+#define CNTL_3p3z_B3_4 `Number(this.COMP[3].B3).toFixed(10)`
+#define CNTL_3p3z_IMin_4 _IQ24(-0.1);
+#define CNTL_3p3z_Max_4 _IQ24(0.9);
+#define CNTL_3p3z_Min_4 _IQ24(0.0);
+
+
+#define CNTL_3p3z_A1_5 `Number(this.COMP[4].A1).toFixed(10)`
+#define CNTL_3p3z_A2_5 `Number(this.COMP[4].A2).toFixed(10)`
+#define CNTL_3p3z_A3_5 `Number(this.COMP[4].A3).toFixed(10)`
+#define CNTL_3p3z_B0_5 `Number(this.COMP[4].B0).toFixed(10)`
+#define CNTL_3p3z_B1_5 `Number(this.COMP[4].B1).toFixed(10)`
+#define CNTL_3p3z_B2_5 `Number(this.COMP[4].B2).toFixed(10)`
+#define CNTL_3p3z_B3_5 `Number(this.COMP[4].B3).toFixed(10)`
+#define CNTL_3p3z_IMin_5 _IQ24(-0.1);
+#define CNTL_3p3z_Max_5 _IQ24(0.9);
+#define CNTL_3p3z_Min_5 _IQ24(0.0);
+
+//==================================================================================
+// System Settings
+//----------------------------------------------------------------------------------
+//Add any system specific setting below
+#define HistorySize 	8	// Number of samples averaged for use in GUI
+#define DLOG_SIZE   	400
+
+//==================================================================================
+// Interrupt Framework options
+//==================================================================================
+
+#define EPWMn_DPL_ISR	1	// for EPWM triggered ISR set as 1
+#define ADC_DPL_ISR	    0	// for ADC INT 1 triggered ISR set as 1 
+#define CLAn_DPL_ISR	0	// for CLA Task n Triggered ISR set as 1
+
+#endif //_PROJSETTINGS_H
+
+

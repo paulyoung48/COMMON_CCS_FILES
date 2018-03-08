@@ -1,0 +1,16 @@
+
+.divider {
+    width:5px;
+    height:auto;
+    display:inline-block;
+}
+
+.solutionBtn {
+	padding: 0px !important;
+    width:120px;
+    height:60px;
+    text-align:center;
+    padding-top:20px;
+    font-size:15px;
+}
+

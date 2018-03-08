@@ -1,0 +1,18 @@
+require([
+    "dijit/dijit",
+    "dojo/parser",
+    "maqetta/space",
+    "maqetta/AppStates",
+    "gc/dijit/ContentPane",
+    "gc/dijit/TitlePane",
+    "gc/dijit/ToggleButton",
+    "gc/dijit/GroupBox",
+    "gc/dijit/CheckBox",
+    "gc/dijit/Label",
+    "ti/mcu/common/gui/widgets/SafeListBox",
+    "ti/mcu/common/gui/widgets/SafeDropList",
+    "gc/dijit/Image",
+    "gc/dijit/Button",
+    "gc/dijit/A",
+    "gc/dijit/TextBox"
+]);

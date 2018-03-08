@@ -1,0 +1,136 @@
+<div id="buckConfigure" class="container" >
+    <br><br>
+    <label id="buckConfigureLabel" data-dojo-type="gc.dijit.Label" style="margin-left:50px; font-size:25pt; position:relative;"></label>
+    <br><br>
+    <table style="position:relative;">
+      <tbody>
+		<tr>
+			<td>
+			</td>
+			<td>
+			</td>
+			<td>
+			</td>
+		</tr>
+        <tr>
+            <td>
+				<select id="adcVinSelect" data-dojo-type="gc.dijit.SafeDropList" style="margin-top:45px; margin-left:5px; width:75px; height:20px;" type="text"></select>
+			</td>
+            <td>
+				<img src="images/buckPowerStageT.png" id="buckPowerStage" data-dojo-type="gc.dijit.Image" style="margin-top:0px; margin-left:0px; width:500px; height:180px; background-color:transparent; "></img>
+			</td>
+            <td>
+				
+			</td>
+        </tr>
+		<tr>
+			<td>
+			</td>
+			<td>
+				<select id="pwmSelect" data-dojo-type="gc.dijit.SafeDropList" style="margin-top:0px; margin-left:80px;  width:75px; height:20px;" type="text"></select>
+				<select id="adcILSelect" data-dojo-type="gc.dijit.SafeDropList" style="margin-top:-22px; margin-left:200px;  width:110px; height:20px;" type="text"></select>
+				<select id="adcVoutSelect" data-dojo-type="gc.dijit.SafeDropList" style="margin-top:-22px; margin-left:400px; width:75px; height:20px;" type="text"></select>
+			</td>
+			<td>
+			</td>
+		</tr>
+      </tbody>
+    </table>
+    <div style="position:relative;">
+        
+    </div>
+    <div title="Power Stage Parameters" id="powerStageGroup" data-dojo-type="gc.dijit.GroupBox" style="margin-top:30px; margin-left:20px;">
+        <table style="position:relative;">
+          <tbody>
+            <tr>
+				<td>
+                <label label="Vout Sensing : Rc" data-dojo-type="gc.dijit.Label" style="margin-left:10px; font-size:10pt;"></label>
+				<input id="Rc_TextBox" data-dojo-type="gc.dijit.TextBox" style="margin-left:10px; width:50px;" type="text" intermediateChanges="false"></input>
+				<label label="Ohms; Rd" data-dojo-type="gc.dijit.Label" style="margin-left:10px; font-size:10pt;"></label>
+				<input id="Rd_TextBox" data-dojo-type="gc.dijit.TextBox" style="margin-left:10px; width:50px;" type="text" intermediateChanges="false"></input>
+				<label label="Ohms; Rfltr_a" data-dojo-type="gc.dijit.Label" style="margin-left:10px; font-size:10pt;"></label>
+				<input id="Rfltr_a_TextBox" data-dojo-type="gc.dijit.TextBox" style="margin-top:10px; margin-left:10px; width:50px;" type="text" intermediateChanges="false"></input>
+                <label label="Ohms; Cfltr_a" data-dojo-type="gc.dijit.Label" style="margin-top:12px; margin-left:5px; font-size:10pt;"></label>
+				<input id="Cfltr_a_TextBox" data-dojo-type="gc.dijit.TextBox" style="margin-top:10px; margin-left:10px; margin-bottom:10px; width:80px;" type="text" intermediateChanges="false"></input></td>
+                <label label="F" data-dojo-type="gc.dijit.Label" style="margin-top:12px; margin-left:5px; font-size:10pt;"></label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+                <label label="Vin Sensing : Ra" data-dojo-type="gc.dijit.Label" style="margin-left:10px; font-size:10pt;"></label>
+				<input id="Ra_TextBox" data-dojo-type="gc.dijit.TextBox" style="margin-left:10px; width:50px;" type="text" intermediateChanges="false"></input>
+				<label label="Ohms; Rb" data-dojo-type="gc.dijit.Label" style="margin-left:10px; font-size:10pt;"></label>
+				<input id="Rb_TextBox" data-dojo-type="gc.dijit.TextBox" style="margin-left:10px; width:50px;" type="text" intermediateChanges="false"></input>
+				<label label="Ohms;" data-dojo-type="gc.dijit.Label" style="margin-left:10px; font-size:10pt;"></label>
+				</td>
+			</tr>
+			<tr>
+                <td><input id="Vin_SenseMax_TextBox" data-dojo-type="gc.dijit.TextBox" style="margin-left:10px; width:80px;" type="text" intermediateChanges="false"></input></td>
+                <td><label label="V" id="vInMaxUnitsLabel" data-dojo-type="gc.dijit.Label" style="margin-top:2px; margin-left:5px; font-size:10pt;"></label></td>
+                <td><label label="Typical Load" id="iOutLabel" data-dojo-type="gc.dijit.Label" style="margin-left:30px; font-size:10pt;"></label></td>
+                <td><input id="Iout_TextBox" data-dojo-type="gc.dijit.TextBox" style="margin-left:10px; width:80px;" type="text" intermediateChanges="false"></input></td>
+                <td><label label="Amps" id="iOutUnitsLabel" data-dojo-type="gc.dijit.Label" style="margin-top:2px; margin-right:20px; margin-left:5px; font-size:10pt;"></label></td>
+            </tr>
+            <tr>
+                <td><label label="PWM Switching Frequency" id="pwmSwitchingFreqLabel" data-dojo-type="gc.dijit.Label" style="margin-top:10px; margin-left:10px; font-size:10pt;"></label></td>
+                <td><input id="Fsw_TextBox" data-dojo-type="gc.dijit.TextBox" style="margin-top:10px; margin-left:10px; width:80px;" type="text" intermediateChanges="false"></input></td>
+                <td><label label="kHz" id="pwmSwitchingUnitsLabel" data-dojo-type="gc.dijit.Label" style="margin-top:12px; margin-left:5px; font-size:10pt;"></label></td>
+                <td><label label="Inductor" id="inductorLabel" data-dojo-type="gc.dijit.Label" style="margin-top:10px; margin-left:30px; font-size:10pt;"></label></td>
+                <td><input id="L_TextBox" data-dojo-type="gc.dijit.TextBox" style="margin-top:10px; margin-left:10px; width:80px;" type="text" intermediateChanges="false"></input></td>
+                <td><label label="H" id="inductorUnitsLabel" data-dojo-type="gc.dijit.Label" style="margin-top:12px; margin-left:5px; font-size:10pt;"></label></td>
+            </tr>
+            <tr>
+                <td><label label="Typical Input Voltage" id="vInLabel" data-dojo-type="gc.dijit.Label" style="margin-top:10px; margin-left:10px; font-size:10pt;"></label></td>
+                <td><input id="Vin_TextBox" data-dojo-type="gc.dijit.TextBox" style="margin-top:10px; margin-left:10px; width:80px;" type="text" intermediateChanges="false"></input></td>
+                <td><label label="V" id="vInUnitsLabel" data-dojo-type="gc.dijit.Label" style="margin-top:12px; margin-left:5px; font-size:10pt;"></label></td>
+                <td><label label="Output Capacitor" id="outputCapcacitorLabel" data-dojo-type="gc.dijit.Label" style="margin-top:10px; margin-left:30px; font-size:10pt;"></label></td>
+                <td><input id="Celec_TextBox" data-dojo-type="gc.dijit.TextBox" style="margin-top:10px; margin-left:10px; width:80px;" type="text" intermediateChanges="false"></input></td>
+                <td><label label="F" id="outputCapcacitorUnitsLabel" data-dojo-type="gc.dijit.Label" style="margin-top:12px; margin-left:5px; font-size:10pt;"></label></td>
+            </tr>
+            <tr>
+                <td><label label="Typical Output Voltage" id="vOutLabel" data-dojo-type="gc.dijit.Label" style="margin-top:10px; margin-left:10px; font-size:10pt;"></label></td>
+                <td><input id="Vout_TextBox" data-dojo-type="gc.dijit.TextBox" style="margin-top:10px; margin-left:10px; margin-bottom:10px; width:80px;" type="text" intermediateChanges="false"></input></td>
+                <td><label label="V" id="vOutUnitsLabel" data-dojo-type="gc.dijit.Label" style="margin-top:12px; margin-left:5px; font-size:10pt;"></label></td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <br>
+    <div title="Compensator" id="compensatorGroup" data-dojo-type="gc.dijit.GroupBox" style="margin-top:20px; margin-left:20px;">
+        <table style="position:relative;">
+          <tbody>
+            <tr>
+				<td><select id="Fsw_Fctrl_Ratio_Select" data-dojo-type="gc.dijit.SafeDropList" style="margin-top:10px; margin-left:10px;  width:130px; height:20px;" type="text"></select></td>
+				<td><select id="COMP_NUM_Select" data-dojo-type="gc.dijit.SafeDropList" style="margin-top:10px; margin-left:10px;  width:75px; height:20px;" type="text"></select></td>
+               	<td><img src="images/CompDesignGUI.png" class="noPadding" ng-click="execPowerStageClicked()" id="execPowerStage" data-dojo-type="gc.dijit.Image" style="margin-top:0px; margin-left:10px; margin-right:0px; width:100px; height:50px; cursor: pointer;"></img></td>
+				<td><img src="images/SFRA.png" class="noPadding" ng-click="execSFRAClicked()" id="execSFRA" data-dojo-type="gc.dijit.Image" style="margin-top:0px; margin-left:10px; margin-bottom:0px; width:100px; height:50px; cursor: pointer;"></img></td>
+				
+            </tr >       	
+            <tr>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <br>
+    <div title="Advanced Power Stage Parameters" id="advPowerStageGroup" data-dojo-type="gc.dijit.GroupBox" style="margin-top:20px; margin-left:20px;">
+        <table style="position:relative;">
+          <tbody>
+            
+            <tr>
+                <td><label label="Rds2" id="rds2Label" data-dojo-type="gc.dijit.Label" style="margin-top:10px; margin-left:10px; font-size:10pt;"></label></td>
+                <td><input id="Rds2_TextBox" data-dojo-type="gc.dijit.TextBox" style="margin-top:10px; margin-left:10px; width:80px;" type="text" intermediateChanges="false"></input></td>
+                <td><label label="Ohms" id="rds2UnitsLabel" data-dojo-type="gc.dijit.Label" style="margin-top:12px; margin-left:5px; font-size:10pt;"></label></td>
+            </tr>
+            <tr>
+                
+            </tr>
+            <tr>
+                
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <br>
+	<input class="noPadding" type="button" ng-click="saveSettingsClicked()" id="saveSettings" data-dojo-type="ManagedButton" style="margin-top:40px; margin-left:150px;"></input>
+	<input label="Re-write Power Stage XML" class="noPadding" type="button" ng-click="refreshPowerStageClicked()" id="refreshPowerStage" data-dojo-type="ManagedButton" style="margin-top:40px; margin-left:10px;"></input>
+</div>

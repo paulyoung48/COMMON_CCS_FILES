@@ -1,0 +1,47 @@
+/*
+ *  ======== {Solution}.json ========
+ *  RTSC config param bindings. This file is automatically loaded when the
+ *  devkits.{KitName}.{Solution} module
+ *  is used by a .cfg file.
+ *  The "serveBindName" field in these objects refer to RTSC config params
+ *  in the {Solution}.xdc file. We define these bindings in order to have listener
+ *  functions on them in {Solution}.js.
+ *  See http://ap-fpdsp-swapps.dal.design.ti.com/index.php/PowerSuite#.json_file_bindings
+ *  for details on .json file properties used here.
+ * /
+ 
+/* widget bindings object */
+{"widgetBindings": [
+
+    /* Hook up the RTSC backplane so binding to {Solution}.xdc occurs */
+    {
+        "serverBindName": "backplane.$default_model",
+        "options": { "defaultValue" : "rtsc" }
+    },
+
+    /*
+     *  ======== {Solution}Inited ========
+     *  Set to 'true' after all initialization in {Solution}.xs
+     *  is completed. When it is set to true, ${Solution}.on{Solution}InitedChanged
+     *  in {Solution}.js is fired, which then inititiates HTML side initialization
+     */
+    {
+        "propertyName": "SolutionInited",
+        "serverBindName": "this.SolutionInited",
+        "widgetId": "prop",
+        "options": {"dataType": "Boolean", "inPreProcessingFunction" : "$buck.onSolutionInitedChanged"}
+    },
+    
+    /*
+     *  ======== solutionParams ========
+     *  String that contains the contents of solution.js in the
+     *  current CCS project. Initialized in {Solution}.xs
+     *  See $scope.$watch('solutionParams') listener in {Solution}.js.
+     */
+    {
+        "propertyName": "solutionParams",
+        "serverBindName": "this.solutionParams",
+        "widgetId": "prop",
+        "options": {"dataType": "String"}
+    }
+]}

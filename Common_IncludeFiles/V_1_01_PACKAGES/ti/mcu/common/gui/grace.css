@@ -1,0 +1,228 @@
+/*
+* This file is provided for Grace and or SysBios style rules.
+*
+*/
+
+html, body.claro {
+	height : 100%;
+	width : 100%;
+	font-size : 8pt;
+	font-family : Geneva,Tahoma,Helvetica,Arial,san-serif;
+}
+
+body.claro {
+	background-color: #ffffff;
+}
+
+a, select, input, label, textArea, span {
+	font-size : inherit;
+	font-family : inherit;
+	display : inline-block;
+	z-index : 1;
+}
+
+a, label, input, span {
+	white-space : nowrap;
+}
+
+.wrappedCheckbox label {
+	white-space: normal;
+	display: inline;
+}
+
+a:hover {
+    color : #0000FF;
+}
+
+a.dijitReadOnly {
+	color : #B0B0D0;
+}
+
+a {
+	color : #000080;
+}
+
+p {
+	margin: 4pt;
+}
+
+td {
+	vertical-align: top; 
+}
+
+span.dijitTitlePaneTextNode {
+	font-weight: bold;
+}
+
+#grace .dijitTitlePane .dijitTitlePaneTitle {
+	white-space: nowrap;
+	color: #194c7f;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	border: 1px solid #b4c8dc;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#e0e8f0), to(white));
+	background-image: -o-linear-gradient(#e0e8f0, white);
+	background-image: -ms-linear-gradient(#e0e8f0, white);
+	background-image: -moz-linear-gradient(#e0e8f0, white);
+	background-image: -webkit-linear-gradient(#e0e8f0, white);
+	background-image: linear-gradient(#e0e8f0, white);
+}
+
+#grace .dijitTitlePane .dijitTitlePaneTitle:hover {
+	color: #7593B2;
+}
+#grace .dijitTitlePane .dijitTitlePaneTitle:hover .dijitArrowNode {
+	opacity: 0.4;
+}
+
+#grace .dijitTitlePane .dijitTitlePaneContentOuter {
+	background-color: inherit;
+}
+
+#grace .imageOnlyButton .dijitButtonNode, 
+#grace .imageOnlyButton .dijitButtonNode .dijitButtonContents,
+#grace .imageOnlyButton .dijitButtonNode .dijitButtonContents .dijitIcon {
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+#grace .imageOnlyButton .dijitButtonNode, 
+.imageOnlyButton {
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+#grace .noPadding .dijitButtonNode {
+	padding: 0px !important;
+}
+
+#grace .dijiImage {
+	padding: 1px !important;
+}
+
+#grace .popupmenu {
+	display: inline-block;
+}
+
+#grace .popupmenu,
+#grace .popupmenu .dijitButtonContents, 
+#grace .popupmenu .dijitArrowButtonContainer,
+#grace .popupmenu .dijitButtonContents .dijitReset {
+	border: none;
+	margin: 0px;
+	padding: 0px;
+	background-image: none;
+	background-color: transparent;
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+}
+
+#grace .infobox {
+	border: 1px solid black;
+	white-space: normal;
+}
+
+#grace code {
+	font-size : 8pt;
+	font-family : Courier,San-serif;
+	background : none;
+	border : none;
+}
+
+iframe {
+	width: 100%;
+	height: 100%;
+	border: none;
+	display: block;
+ }
+ 
+ #grace .pagelink {
+ 	font-size : 9pt;
+ 	margin: 4px;
+ 	padding: 0px;
+ }
+ 
+ #grace .rotate90 {
+    /* Safari, Chrome */
+    -webkit-transform: rotate(90deg);
+
+    /* Firefox */
+    -moz-transform: rotate(90deg);
+
+    /* IE */
+    -ms-transform: rotate(90deg);
+
+    /* Opera */
+    -o-transform: rotate(90deg);
+}
+
+ #grace .rotate270 {
+    /* Safari, Chrome */
+    -webkit-transform: rotate(-90deg);
+
+    /* Firefox */
+    -moz-transform: rotate(-90deg);
+
+    /* IE */
+    -ms-transform: rotate(-90deg);
+
+    /* Opera */
+    -o-transform: rotate(-90deg);
+}
+
+#grace .dojoxMultiSelectItem .dojoxMultiSelectItemLabel {
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+#grace .radioButtonStyle .dijitCheckBox {
+	background-position: -49px;
+	width: 16px;
+  	height: 16px;
+}
+
+#grace .radioButtonStyle  .dijitCheckBoxChecked {
+	background-position: -65px;
+}
+
+.grayout {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%);
+     
+ 	-webkit-opacity: 0.4;
+ 	-moz-opacity: 0.4;
+	opacity: 0.4;
+}
+
+#grace table.tiselect.dijitHidden {
+	visibility: hidden !important;
+	display: block !important;
+}
+
+.navForwardIcon {
+	background-image: url('ti/mcu/common/gui/images/nav_forward.gif');
+	width: 16px;
+	height: 16px;
+}
+
+.navBackwardIcon {
+	background-image: url('ti/mcu/common/gui/images/nav_backward.gif');
+	width: 16px;
+	height: 16px;
+}
+
+.refreshIcon {
+	background-image: url('ti/mcu/common/gui/images/refresh_nav.gif');
+	width: 16px;
+	height: 16px;
+}

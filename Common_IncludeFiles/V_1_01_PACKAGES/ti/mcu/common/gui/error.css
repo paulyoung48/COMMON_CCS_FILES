@@ -1,0 +1,30 @@
+
+ .myError {
+  display: none;
+  z-index: 100;
+  border-radius:5px;
+  box-shadow:0 1px 3px #aaa;
+  border:1px solid #ddd;
+  opacity: 0.9;
+}
+.myError::before {
+  content: "\25B2";
+  z-index: 101;
+  position: absolute;
+  top:-12px;
+  left:5%;
+  font-size:14px;
+  line-height:14px;
+  color:#ddd;
+  text-shadow:none;
+  display:block;
+}
+.ng-invalid + .myError {
+  display: block;
+}
+
+.ng-invalid + .myError::before {
+  color: #ec3f41;
+}
+
+

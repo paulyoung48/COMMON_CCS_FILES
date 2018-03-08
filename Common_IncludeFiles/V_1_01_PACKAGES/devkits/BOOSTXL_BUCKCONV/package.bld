@@ -1,0 +1,3 @@
+/* Export all files in this package to the release */
+Pkg.attrs.exportAll = true;
+
